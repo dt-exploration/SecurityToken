@@ -1,10 +1,9 @@
 <?php
-
 session_start();
 
 $token = md5(uniqid(microtime(),true));
-
 $_SESSION['token'] = $token;
+
 ?>
 
 <!DOCTYPE HTML>
