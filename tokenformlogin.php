@@ -1,13 +1,13 @@
 <?php
 session_start();
 
-$token = md5(uniqid(microtime(),true));
+$token = uniqid(microtime(),true);
 //This method is not Cryptographically secure !
 //Instead this shoud be used:
 //$token = bin2hex(random_bytes(16));
 //random_bytes or random_int shoud be used !
 
-$_SESSION['token'] = $token;
+$_SESSION['token'] = md5($token);
 
 ?>
 

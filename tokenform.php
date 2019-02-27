@@ -3,7 +3,7 @@ session_start();
 $valid = false;
 
 if (isset($_SESSION['token']) && isset($_POST['token']) &&
-    $_SESSION['token']== $_POST['token']) {
+    $_SESSION['token']== md5($_POST['token'])) {
 
     $valid = true;
 
